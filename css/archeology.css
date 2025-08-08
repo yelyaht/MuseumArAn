@@ -90,7 +90,8 @@ button:hover {
   font-size: inherit;
   font-weight: normal;
   border-radius: 10px;
-  max-width: 1100px;
+  max-width: 1400px;
+  width: 95%;
   margin: 24px auto;
   text-align: left;
 }
@@ -126,7 +127,7 @@ button:hover {
 .elven-row h3 a {
   color: #fffdd8;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .vampire-row h3 a:hover,
@@ -163,8 +164,8 @@ button:hover {
   column-count: 2;
   column-gap: 28px;
   margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .spec-list p{
