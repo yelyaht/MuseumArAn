@@ -57,6 +57,10 @@ header h1 {
   gap: 10px;
 }
 
+.sub-nav-buttons {
+  margin: 20px 0;
+}
+
 button {
   margin: 5px;
   padding: 8px 16px;
