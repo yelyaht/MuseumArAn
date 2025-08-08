@@ -73,7 +73,7 @@ button:hover {
   background-color: #56a8bd;
 }
 
-.staff h2 {
+.artifact h2 {
   background-color: rgba(90, 170, 220, 0.8);
   display: inline-block;
   padding: 20px 40px;
@@ -86,6 +86,13 @@ button:hover {
 .vampire-container,
 .werewolf-container,
 .elven-container {
+  background-color: rgba(90, 170, 220, 0.8);
+  padding: 60px 40px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 200px;
   max-width: 1100px;
   margin: 24px auto;
   text-align: left;
@@ -94,17 +101,19 @@ button:hover {
 .vampire-row,
 .werewolf-row,
 .elven-row {
-  display: block;       /* override previous flex */
+  display: block;
   margin-bottom: 32px;
+  padding: 20px;
+  border-radius: 12px;
 }
 
 /* Headings above each artifact */
 .vampire-row h3,
 .werewolf-row h3,
 .elven-row h3 {
-  margin: 0 0 10px 0;
+  margin: 0 0 12px 0;          /* space below title */
   font-family: 'Cinzel', serif;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .vampire-row h3 a,
@@ -113,60 +122,67 @@ button:hover {
   color: #fffdd8;
   text-decoration: none;
 }
+
 .vampire-row h3 a:hover,
 .werewolf-row h3 a:hover,
 .elven-row h3 a:hover {
   text-decoration: underline;
 }
 
-.card-content {
+.artifact-card {
   display: grid;
-  grid-template-columns: 240px 1fr; /* image + list area */
-  gap: 12px;                        /* tighter gap */
+  grid-template-columns: 260px 1fr; /* image + list area */
+  gap: 16px;
   align-items: start;
-  background-color: rgba(86, 168, 189, 0.85); /* optional: give it a subtle card bg */
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(15, 82, 186, 0.4); /* new shadow */
-}
-
-.card-content > img {
-  width: 100%;
-  max-width: 240px;
-  height: auto;
-  margin-left: -80px; /* adjust this until image is where you want it */
-}
-/* Two-column list layout */
-.card-text ol {
-  column-count: 2;         /* split list into 2 columns */
-  column-gap: 30px;        /* space between columns */
-  list-style-position: inside;
-  list-syle: none;
-  margin: 0;
+  background: none;
   padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-.card-text ol li {
-  break-inside: avoid;     /* prevent item split between columns */
-  margin-bottom: 8px;
+.artifact-title {
+  grid-area: title;
+  margin: 0 0 4px 0;
+  font-family: 'Cinzel', serif;
+  font-size: 1em;
 }
 
-.card-text {
-  margin-left: -50px;  /* increases the pull */
-  background-color: rgba(86, 168, 189, 0.85);
-  padding: 15px;
+.artifact-title a {
+  color: #fffdd8
+  text-decoration: none;
+}
+
+/* column/grid */
+
+.artifact-media img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border: 4px solid #fffdd8;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(15, 82, 186, 0.4);
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  display: block;
+  margin: 0;
 }
 
-.about-box {
-  background-color: rgba(90, 170, 220, 0.8);
-  padding: 60px 40px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  border-radius: 10px;
-  flex: 1;
-  min-width: 200px;
+.artifact-text{
+  margin: 0;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.spec-list {
+  column-count: 2;
+  column-gap: 28px;
+  margin: 0;
+}
+
+.spec-list p{
+  break-inside: avoid;
+  margin: 0 0 8px 0;
+  line-height: 1.6;
 }
 
 .vampire-row img {
