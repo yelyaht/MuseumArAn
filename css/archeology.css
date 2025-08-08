@@ -44,10 +44,11 @@ header {
 }
 
 header h1 {
+  padding: 20px;
   margin: 0;
+  font-size: 3rem;
 }
 
-/* attempt to get nav container below title */
 .nav-buttons {
   position: absolute;
   bottom: 10px;
@@ -82,49 +83,80 @@ button:hover {
   margin-top: 40px;
 }
 
-.vampire-container {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.werewolf-container {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
+.vampire-container,
+.werewolf-container,
 .elven-container {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  max-width: 1100px;
+  margin: 24px auto;
+  text-align: left;
 }
 
-.vampire-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.werewolf-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
+.vampire-row,
+.werewolf-row,
 .elven-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: block;       /* override previous flex */
+  margin-bottom: 32px;
+}
+
+/* Headings above each artifact */
+.vampire-row h3,
+.werewolf-row h3,
+.elven-row h3 {
+  margin: 0 0 10px 0;
+  font-family: 'Cinzel', serif;
+  font-size: 1.4em;
+}
+
+.vampire-row h3 a,
+.werewolf-row h3 a,
+.elven-row h3 a {
+  color: #fffdd8;
+  text-decoration: none;
+}
+.vampire-row h3 a:hover,
+.werewolf-row h3 a:hover,
+.elven-row h3 a:hover {
+  text-decoration: underline;
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: 240px 1fr; /* image + list area */
+  gap: 12px;                        /* tighter gap */
+  align-items: start;
+  background-color: rgba(86, 168, 189, 0.85); /* optional: give it a subtle card bg */
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(15, 82, 186, 0.4); /* new shadow */
+}
+
+.card-content > img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin-left: -80px; /* adjust this until image is where you want it */
+}
+/* Two-column list layout */
+.card-text ol {
+  column-count: 2;         /* split list into 2 columns */
+  column-gap: 30px;        /* space between columns */
+  list-style-position: inside;
+  list-syle: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-text ol li {
+  break-inside: avoid;     /* prevent item split between columns */
+  margin-bottom: 8px;
+}
+
+.card-text {
+  margin-left: -50px;  /* increases the pull */
+  background-color: rgba(86, 168, 189, 0.85);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(15, 82, 186, 0.4);
 }
 
 .about-box {
@@ -135,10 +167,6 @@ button:hover {
   border-radius: 10px;
   flex: 1;
   min-width: 200px;
-}
-
-.bio-paragraph {
-  margin-top: 20px;
 }
 
 .vampire-row img {
