@@ -86,13 +86,10 @@ button:hover {
 .vampire-container,
 .werewolf-container,
 .elven-container {
-  background-color: rgba(90, 170, 220, 0.8);
-  padding: 60px 40px;
-  font-size: 2.5rem;
-  font-weight: bold;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
   border-radius: 10px;
-  flex: 1;
-  min-width: 200px;
   max-width: 1100px;
   margin: 24px auto;
   text-align: left;
@@ -106,10 +103,12 @@ button:hover {
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "title title"
-    "media content"
+    "media content";
   gap: 16px;
   padding: 20px;
   border-radius: 12px;
+  background-color: rgba(86, 168, 189, 0.85);
+  box-shadow: 0 0 12px rgba(15, 82, 186, 0.4);
 }
 
 /* Headings above each artifact */
@@ -119,7 +118,7 @@ button:hover {
   grid-area: title;
   margin: 0 0 12px 0;          /* space below title */
   font-family: 'Cinzel', serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .vampire-row h3 a,
@@ -127,14 +126,12 @@ button:hover {
 .elven-row h3 a {
   color: #fffdd8;
   text-decoration: none;
-  font-size: 0.5em;
+  font-size: 1.2em;
 }
 
 .vampire-row h3 a:hover,
 .werewolf-row h3 a:hover,
-.elven-row h3 a:hover {
-  text-decoration: underline;
-}
+.elven-row h3 a:hover { text-decoration: underline; }
 
 /*
 .artifact-title {
@@ -150,10 +147,7 @@ button:hover {
 }*/
 
 /* column/grid */
-.artifact-media {
-  grid-area: media;
-}
-
+.artifact-media { grid-area: media; }
 .artifact-media img {
   width: 100%;
   max-width: 260px;
@@ -164,15 +158,7 @@ button:hover {
   display: block;
 }
 
-.artifact-text{
-  grid-area: content;
-  margin: 0;
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
+.artifact-text{ grid-area: content; }
 .spec-list {
   column-count: 2;
   column-gap: 28px;
