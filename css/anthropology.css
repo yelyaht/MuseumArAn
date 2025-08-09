@@ -113,7 +113,7 @@ button:hover {
 .siren-container,
 .cerberus-container {
   padding: 0;
-  font-size: inherit;
+  font-size: 2.5rem; /* testing this */
   font-weight: normal;
   border-radius: 10px;
   max-width: 1100px;
