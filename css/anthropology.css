@@ -69,6 +69,10 @@ button {
   transition: background-color 0.3s ease;
 }
 
+.sub-nav-buttons {
+  margin: 20px 0;
+}
+
 button:hover {
   background-color: #56a8bd;
 }
